@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const version = "1.0.1";
+const version = "1.0.2";
 
 const API_SNIPPET = `https://wikisnippets.herokuapp.com/api/wikisnippet/`;
 const API_FULL = `https://wikisnippets.herokuapp.com/api/wikipage/`;
