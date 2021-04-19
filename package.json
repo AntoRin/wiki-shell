@@ -1,0 +1,32 @@
+{
+   "name": "wiki-shell",
+   "version": "1.0.0",
+   "description": "Wikipedia, but in your terminal",
+   "main": "src/index.js",
+   "bin": {
+      "wiki": "./bin/cli",
+      "wiki-shell": "./bin/cli"
+   },
+   "preferGlobal": true,
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/AntoRin/wiki-shell.git"
+   },
+   "keywords": [
+      "CLI",
+      "Wikipedia",
+      "node.js"
+   ],
+   "author": "AntoRin",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/AntoRin/wiki-shell/issues"
+   },
+   "homepage": "https://github.com/AntoRin/wiki-shell#readme",
+   "dependencies": {
+      "node-fetch": "^2.6.1"
+   }
+}
