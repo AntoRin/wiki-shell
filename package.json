@@ -8,9 +8,7 @@
       "wiki-shell": "./bin/cli"
    },
    "preferGlobal": true,
-   "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-   },
+   "scripts": {},
    "repository": {
       "type": "git",
       "url": "git+https://github.com/AntoRin/wiki-shell.git"
