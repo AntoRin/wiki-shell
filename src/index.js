@@ -56,6 +56,7 @@ async function getWikiSnippet() {
       url = API_SNIPPET + searchTerm;
    }
    console.log("Loading...");
+   console.log(moreDataLength);
    try {
       let result = await fetch(url);
       let snippet = await result.json();
@@ -69,7 +70,7 @@ async function getWikiSnippet() {
                : (() => {
                     for (
                        let i = 0;
-                       i < moreDataLength, i < snippet.data.length;
+                       i < moreDataLength && i < snippet.data.length;
                        i++
                     ) {
                        console.log(snippet.data[i]);
