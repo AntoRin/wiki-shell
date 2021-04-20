@@ -1,15 +1,27 @@
 const fetch = require("node-fetch");
 
-const version = "1.0.2";
+const version = "1.0.3";
 
 const API_SNIPPET = `https://wikisnippets.herokuapp.com/api/wikisnippet/`;
 const API_FULL = `https://wikisnippets.herokuapp.com/api/wikipage/`;
 
-const commonFlags = ["-v", "--version", "-a"];
+const commonFlags = ["-h", "--help", "-v", "--version", "-a"];
 
 function handleError(error) {
    console.error(error);
    process.exit(1);
+}
+
+function showHelp() {
+   console.log(
+      "\nUse command wiki (or) wiki-shell followed by a search query to get a Wikipedia snippet\n"
+   );
+
+   console.log("\nArguments: [-a, -l=<number>, --length=<number>]\n");
+
+   console.log(
+      "Pass in an argument before your search query to have control over how much content you receive"
+   );
 }
 
 function parseFlag(flag) {
@@ -29,6 +41,10 @@ function parseFlag(flag) {
       case "-v":
       case "--version":
          console.log(version);
+         process.exit(0);
+      case "-h":
+      case "--help":
+         showHelp();
          process.exit(0);
       case "-a":
          return -1;
